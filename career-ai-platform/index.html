@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career-Based AI for All (CB-AI)</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="ui-improvements.css">
+</head>
+<body class="bg-gray-50">
+  <div id="live-region" class="live-region" aria-live="polite" aria-atomic="true"></div>
+    <div id="app">
+        <!-- Navigation -->
+        <nav class="bg-white shadow-lg sticky top-0 z-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex justify-between h-16">
+                    <div class="flex items-center">
+                        <div class="flex-shrink-0 flex items-center">
+                            <i class="fas fa-graduation-cap text-blue-600 text-2xl mr-2"></i>
+                            <span class="font-bold text-xl text-gray-800">CB-AI</span>
+                        </div>
+                        <div class="hidden md:flex ml-10 space-x-8">
+                            <a href="#features" class="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium">Features</a>
+                            <a href="#how-it-works" class="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium">How It Works</a>
+                            <a href="#personas" class="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium">Who It's For</a>
+                            <a href="#assessment" class="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium">Get Started</a>
+                        </div>
+                    </div>
+                    <div class="flex items-center space-x-4">
+                        <button onclick="showLanguageSelector()" class="text-gray-700 hover:text-blue-600">
+                            <i class="fas fa-globe"></i> EN
+                        </button>
+                        <button onclick="showLogin()" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700">
+                            Sign In
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Hero Section -->
+        <section class="relative bg-gradient-to-br from-blue-600 to-purple-700 text-white py-20">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center">
+                    <h1 class="text-4xl md:text-6xl font-bold mb-6">
+                        Find Your Perfect Career Path with AI
+                    </h1>
+                    <p class="text-xl md:text-2xl mb-8 text-blue-100">
+                        Personalized career guidance combining psychometric assessment, 
+                        real-time labor market intelligence, and adaptive learning roadmaps
+                    </p>
+                    <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+                        <button onclick="startAssessment()" class="bg-white text-blue-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-blue-50 transition">
+                            <i class="fas fa-play mr-2"></i> Start Free Assessment
+                        </button>
+                        <button onclick="selectCareer()" class="border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white hover:text-blue-600 transition">
+                            <i class="fas fa-target mr-2"></i> I Know My Career Goal
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Key Features -->
+        <section id="features" class="py-16">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl font-bold text-center text-gray-900 mb-12">
+                    Intelligent Career Guidance Features
+                </h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition">
+                        <div class="text-blue-600 text-3xl mb-4">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Adaptive Assessment</h3>
+                        <p class="text-gray-600">Computerized adaptive testing evaluates aptitude, interests, personality, and learning style with personalized question flow</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition">
+                        <div class="text-green-600 text-3xl mb-4">
+                            <i class="fas fa-route"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Personalized Roadmaps</h3>
+                        <p class="text-gray-600">DAG-based learning paths with curated resources, projects, and milestones tailored to your schedule and constraints</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition">
+                        <div class="text-purple-600 text-3xl mb-4">
+                            <i class="fas fa-briefcase"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Job Readiness Tools</h3>
+                        <p class="text-gray-600">Resume builder, mock interviews, portfolio projects, and direct job matching with employer partners</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition">
+                        <div class="text-orange-600 text-3xl mb-4">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Labor Market Intelligence</h3>
+                        <p class="text-gray-600">Real-time job market data, salary insights, and demand trends for informed career decisions</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition">
+                        <div class="text-red-600 text-3xl mb-4">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Expert Mentorship</h3>
+                        <p class="text-gray-600">Connect with industry mentors, peer review communities, and cohort-based learning programs</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition">
+                        <div class="text-indigo-600 text-3xl mb-4">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Accessible & Offline</h3>
+                        <p class="text-gray-600">Mobile-first design, low-bandwidth support, and offline bundles for learners with limited connectivity</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- How It Works -->
+        <section id="how-it-works" class="py-16 bg-gray-100">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl font-bold text-center text-gray-900 mb-12">
+                    How CB-AI Works
+                </h2>
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                    <div class="text-center">
+                        <div class="bg-blue-600 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">
+                            1
+                        </div>
+                        <h3 class="font-semibold mb-2">Assessment</h3>
+                        <p class="text-gray-600 text-sm">Complete adaptive evaluation of skills, interests, and constraints</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="bg-blue-600 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">
+                            2
+                        </div>
+                        <h3 class="font-semibold mb-2">Career Matching</h3>
+                        <p class="text-gray-600 text-sm">AI analyzes your profile against labor market data and opportunities</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="bg-blue-600 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">
+                            3
+                        </div>
+                        <h3 class="font-semibold mb-2">Roadmap Generation</h3>
+                        <p class="text-gray-600 text-sm">Receive personalized learning path with curated resources</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="bg-blue-600 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">
+                            4
+                        </div>
+                        <h3 class="font-semibold mb-2">Job Readiness</h3>
+                        <p class="text-gray-600 text-sm">Build portfolio, practice interviews, and connect to employers</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- User Personas -->
+        <section id="personas" class="py-16">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl font-bold text-center text-gray-900 mb-12">
+                    Who CB-AI Helps
+                </h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                        <div class="w-20 h-20 bg-blue-100 rounded-full mx-auto mb-4 flex items-center justify-center">
+                            <i class="fas fa-user-graduate text-blue-600 text-2xl"></i>
+                        </div>
+                        <h3 class="font-semibold mb-2">Students</h3>
+                        <p class="text-gray-600 text-sm">Exploring career options after high school or college</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                        <div class="w-20 h-20 bg-green-100 rounded-full mx-auto mb-4 flex items-center justify-center">
+                            <i class="fas fa-exchange-alt text-green-600 text-2xl"></i>
+                        </div>
+                        <h3 class="font-semibold mb-2">Career Switchers</h3>
+                        <p class="text-gray-600 text-sm">Transitioning to new industries or roles</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                        <div class="w-20 h-20 bg-purple-100 rounded-full mx-auto mb-4 flex items-center justify-center">
+                            <i class="fas fa-wifi text-purple-600 text-2xl"></i>
+                        </div>
+                        <h3 class="font-semibold mb-2">Rural Learners</h3>
+                        <p class="text-gray-600 text-sm">Low-bandwidth access to quality career guidance</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                        <div class="w-20 h-20 bg-orange-100 rounded-full mx-auto mb-4 flex items-center justify-center">
+                            <i class="fas fa-chart-bar text-orange-600 text-2xl"></i>
+                        </div>
+                        <h3 class="font-semibold mb-2">Up-skillers</h3>
+                        <p class="text-gray-600 text-sm">Professionals seeking advancement and new competencies</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats Section -->
+        <section class="bg-blue-600 text-white py-16">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                    <div>
+                        <div class="text-3xl font-bold mb-2">95%</div>
+                        <p class="text-blue-100">Users receive personalized roadmap</p>
+                    </div>
+                    <div>
+                        <div class="text-3xl font-bold mb-2">75%</div>
+                        <p class="text-blue-100">Career match accuracy</p>
+                    </div>
+                    <div>
+                        <div class="text-3xl font-bold mb-2">40+</div>
+                        <p class="text-blue-100">Languages supported</p>
+                    </div>
+                    <div>
+                        <div class="text-3xl font-bold mb-2">100K+</div>
+                        <p class="text-blue-100">Career opportunities</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section id="assessment" class="py-16 bg-gray-50">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h2 class="text-3xl font-bold text-gray-900 mb-6">
+                    Ready to Find Your Perfect Career Path?
+                </h2>
+                <p class="text-xl text-gray-600 mb-8">
+                    Join thousands of users who have discovered their ideal careers through AI-powered guidance
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+                    <button onclick="startAssessment()" class="bg-blue-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-blue-700 transition">
+                        <i class="fas fa-rocket mr-2"></i> Start Your Journey - Free
+                    </button>
+                    <button onclick="learnMore()" class="border-2 border-blue-600 text-blue-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-blue-50 transition">
+                        Learn More
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="bg-gray-900 text-white py-12">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                    <div>
+                        <div class="flex items-center mb-4">
+                            <i class="fas fa-graduation-cap text-blue-400 text-xl mr-2"></i>
+                            <span class="font-bold text-lg">CB-AI</span>
+                        </div>
+                        <p class="text-gray-400 text-sm">
+                            Career-Based AI for All - Intelligent career guidance for everyone
+                        </p>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold mb-4">Product</h4>
+                        <ul class="space-y-2 text-gray-400 text-sm">
+                            <li><a href="#features" class="hover:text-white">Features</a></li>
+                            <li><a href="#how-it-works" class="hover:text-white">How It Works</a></li>
+                            <li><a href="#personas" class="hover:text-white">For Who</a></li>
+                            <li><a href="#" class="hover:text-white">Pricing</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold mb-4">Resources</h4>
+                        <ul class="space-y-2 text-gray-400 text-sm">
+                            <li><a href="#" class="hover:text-white">Blog</a></li>
+                            <li><a href="#" class="hover:text-white">Success Stories</a></li>
+                            <li><a href="#" class="hover:text-white">Research</a></li>
+                            <li><a href="#" class="hover:text-white">API Docs</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold mb-4">Company</h4>
+                        <ul class="space-y-2 text-gray-400 text-sm">
+                            <li><a href="#" class="hover:text-white">About</a></li>
+                            <li><a href="#" class="hover:text-white">Privacy</a></li>
+                            <li><a href="#" class="hover:text-white">Terms</a></li>
+                            <li><a href="#" class="hover:text-white">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400 text-sm">
+                    <p>&copy; 2026 CB-AI. All rights reserved. Making career guidance accessible to everyone.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Modal Container -->
+    <div id="modal-container"></div>
+
+    <script src="app.js"></script>
+</body>
+</html>
