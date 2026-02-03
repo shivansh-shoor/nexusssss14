@@ -41,3 +41,34 @@
   0% { background-position: 0% 0; }
   100% { background-position: -1000px 0; }
 }
+.message.info {
+  background: rgba(37, 99, 235, 0.1);
+  color: var(--primary-color);
+  border: 1px solid rgba(37, 99, 235, 0.2);
+}
+
+/* ⬇️ PASTE BELOW THIS LINE ⬇️ */
+
+/* PAGE / SECTION BACKGROUND → BEIGE */
+body,
+section,
+main,
+.container {
+  background-color: #f0ead6 !important;
+}
+
+/* FLOATING CARDS → CREAM */
+.card,
+.feature-card,
+.bg-white,
+.box,
+[class*="card"] {
+  background-color: #fffaf0 !important;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* TEXT COLOR */
+body {
+  color: #2f2b25;
+}
